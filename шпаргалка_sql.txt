@@ -1,4 +1,4 @@
-> —ÓÁ‰‡ÌËÂ Ú‡·ÎËˆ˚ Ò ÔÓ‰‰ÂÊÍÓÈ ÍËËÎÎËˆ˚:
+Ôªø> –°–æ–∑–¥–∞–Ω–∏–µ —Ç–∞–±–ª–∏—Ü—ã —Å –ø–æ–¥–¥–µ—Ä–∂–∫–æ–π –∫–∏—Ä–∏–ª–ª–∏—Ü—ã:
 CREATE TABLE `tableGame` (
 	`id` INT(11) NULL DEFAULT NULL,
 	`p1map` VARCHAR(200) NULL DEFAULT NULL,
@@ -10,23 +10,23 @@ COLLATE='utf8_general_ci'
 ENGINE=InnoDB
 ;
 
-> —ÓÁ‰‡ÌËÂ ÔÓÎ¸ÁÓ‚‡ÚÂÎˇ:
+> –°–æ–∑–¥–∞–Ω–∏–µ –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è:
 CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 
-> Õ‡ÁÌ‡˜ËÚ¸ ÔË‚ËÎÂ„ËË (select, update, create, insert..):
- GRANT [type of permission] ON [database name].[table name] TO ë[username]í@'localhostí; (% - c Î˛·Ó„Ó ip ‰ÓÒÚÛÔ)
+> –ù–∞–∑–Ω–∞—á–∏—Ç—å –ø—Ä–∏–≤–∏–ª–µ–≥–∏–∏ (select, update, create, insert..):
+ GRANT [type of permission] ON [database name].[table name] TO ‚Äò[username]‚Äô@'localhost‚Äô; (% - c –ª—é–±–æ–≥–æ ip –¥–æ—Å—Ç—É–ø)
 
-> ”‰‡ÎËÚ¸ ÔË‚ËÎÂ„ËË:
- REVOKE [type of permission] ON [database name].[table name] FROM ë[username]í@ëlocalhostí;
+> –£–¥–∞–ª–∏—Ç—å –ø—Ä–∏–≤–∏–ª–µ–≥–∏–∏:
+ REVOKE [type of permission] ON [database name].[table name] FROM ‚Äò[username]‚Äô@‚Äòlocalhost‚Äô;
 
-> ”‰‡ÎËÚ¸ ÔÓÎ¸ÁÓ‚‡ÚÂÎˇ:
- DROP USER ëdemoí@ëlocalhostí;
+> –£–¥–∞–ª–∏—Ç—å –ø–æ–ª—å–∑–æ–≤–∞—Ç–µ–ª—è:
+ DROP USER ‚Äòdemo‚Äô@‚Äòlocalhost‚Äô;
 
-> Õ‡ÈÚË Ï‡ÍÒËÏ‡Î¸ÌÓÂ ˜ËÒÎÓ ‚ ÔÓÎÂ:
+> –ù–∞–π—Ç–∏ –º–∞–∫—Å–∏–º–∞–ª—å–Ω–æ–µ —á–∏—Å–ª–æ –≤ –ø–æ–ª–µ:
 select id from tableGame where id = (select max(id) from tableProfile);
 
-> ”‰‡ÎËÚ¸ ÒÚÓÍÛ: 
+> –£–¥–∞–ª–∏—Ç—å —Å—Ç—Ä–æ–∫—É: 
 DELETE from [table name] where [column name]=[field text];
 
-> »ÁÏÂÌËÚ¸ ‰‡ÌÌ˚Â ‚ ˇ˜ÂÈÍÂ:
+> –ò–∑–º–µ–Ω–∏—Ç—å –¥–∞–Ω–Ω—ã–µ –≤ —è—á–µ–π–∫–µ:
 update tableProfile set findgame = 1 where id =" + idPlayer + ";
