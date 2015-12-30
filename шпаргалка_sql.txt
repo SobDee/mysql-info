@@ -1,0 +1,32 @@
+> —оздание таблицы с поддержкой кириллицы:
+CREATE TABLE `tableGame` (
+	`id` INT(11) NULL DEFAULT NULL,
+	`p1map` VARCHAR(200) NULL DEFAULT NULL,
+	`p2map` VARCHAR(200) NULL DEFAULT NULL,
+	`actionp` INT(11) NULL DEFAULT NULL,
+	`element` VARCHAR(20) NULL DEFAULT NULL
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+
+> —оздание пользовател€:
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+
+> Ќазначить привилегии (select, update, create, insert..):
+ GRANT [type of permission] ON [database name].[table name] TO С[username]Т@'localhostТ; (% - c любого ip доступ)
+
+> ”далить привилегии:
+ REVOKE [type of permission] ON [database name].[table name] FROM С[username]Т@СlocalhostТ;
+
+> ”далить пользовател€:
+ DROP USER СdemoТ@СlocalhostТ;
+
+> Ќайти максимальное число в поле:
+select id from tableGame where id = (select max(id) from tableProfile);
+
+> ”далить строку: 
+DELETE from [table name] where [column name]=[field text];
+
+> »зменить данные в €чейке:
+update tableProfile set findgame = 1 where id =" + idPlayer + ";
